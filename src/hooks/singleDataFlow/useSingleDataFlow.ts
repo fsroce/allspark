@@ -29,19 +29,23 @@ function useSingleDataflow<K>(
   property: keyof K,
   onRelyChange?: (...args: any) => any
 ): Ref<K[keyof K] | undefined> {
-  const resRef = ref<K[keyof K]>()
-  const computedRef = computed(() => store.$state[property])
-  let unWatchFn: WatchStopHandle | undefined
+  const resRef = ref<K[keyof K]>();
+  const computedRef = computed(() => store.$state[property]);
+  let unWatchFn: WatchStopHandle | undefined;
   onMounted(() => {
-    unWatchFn = watch(() => computedRef.value, (newVal) => {
-      resRef.value = { ...newVal }
-      onRelyChange && onRelyChange()
-    }, { immediate: true, deep: true })
-  })
+    unWatchFn = watch(
+      () => computedRef.value,
+      (newVal) => {
+        resRef.value = { ...newVal };
+        onRelyChange && onRelyChange();
+      },
+      { immediate: true, deep: true }
+    );
+  });
   onBeforeUnmount(() => {
-    unWatchFn && unWatchFn()
-  })
-  return resRef
+    unWatchFn && unWatchFn();
+  });
+  return resRef;
 }
 
-export default useSingleDataflow
+export default useSingleDataflow;
