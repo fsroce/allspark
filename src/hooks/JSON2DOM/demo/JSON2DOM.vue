@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, VNode } from "vue";
 import JSON2DOM from "../JSON2DOM";
 import JSONType from "../type";
-const dom = ref<HTMLElement | null>(null);
+const dom = ref<VNode | null>(null);
 onMounted(async () => {
   const response = await import("./data.json");
   dom.value = JSON2DOM((response as unknown as { default: JSONType }).default);
