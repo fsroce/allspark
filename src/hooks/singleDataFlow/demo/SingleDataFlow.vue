@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { reactive, resolveDynamicComponent } from "vue";
+import { reactive } from "vue";
 import useSingleDataflow from "../useSingleDataFlow";
 import data from "./data";
 

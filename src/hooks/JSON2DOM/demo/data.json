@@ -1,0 +1,42 @@
+{
+  "label": "div",
+  "attrs": {
+    "className": "container"
+  },
+  "content": "",
+  "style": {},
+  "children": [
+    {
+      "label": "span",
+      "attrs": {
+        "className": "title"
+      },
+      "content": "hello world",
+      "style": {},
+      "children": []
+    }, {
+      "label": "h3",
+      "content": "world hello",
+      "attrs": {
+        "className": "description"
+      },
+      "style": {},
+      "children": []
+    }, {
+      "label": "ul",
+      "content": "ul li",
+      "children": [
+        {
+          "label": "li",
+          "content": "1",
+          "style": {
+            "color": "red"
+          }
+        }, {
+          "label": "li",
+          "content": "2"
+        }
+      ]
+    }
+  ]
+}
