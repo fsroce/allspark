@@ -4,7 +4,8 @@
 // import Parabola from "./components/Animation/parabola/Parabola.vue";
 // import ClickOutside from "./hooks/clickOutside/demo/ClickOutside.vue";
 // import SingleDataFlow from "./hooks/singleDataFlow/demo/SingleDataFlow.vue";
-import JSON2DOM from "./hooks/JSON2DOM/demo/JSON2DOM.vue";
+// import JSON2DOM from "./hooks/JSON2DOM/demo/JSON2DOM.vue";
+import UploadImage from "./components/UploadImage/UploadImage.vue";
 </script>
 
 <template>
@@ -13,5 +14,6 @@ import JSON2DOM from "./hooks/JSON2DOM/demo/JSON2DOM.vue";
   <!-- <Parabola /> -->
   <!-- <click-outside /> -->
   <!-- <single-data-flow /> -->
-  <JSON2DOM />
+  <!-- <JSON2DOM /> -->
+  <upload-image />
 </template>
